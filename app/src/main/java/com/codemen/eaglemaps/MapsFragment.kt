@@ -101,7 +101,7 @@ class MapsFragment : Fragment(), OnMapReadyCallback ,GoogleMap1.OnMarkerClickLis
         mMap.moveCamera(CameraUpdateFactory.newLatLng(bogota))
         mMap.setOnMarkerClickListener(this)
         mMap.uiSettings.isZoomControlsEnabled = true
-       // mMap.isMyLocationEnabled = true
+        mMap.isMyLocationEnabled = true
 
     }
 
@@ -133,8 +133,8 @@ class MapsFragment : Fragment(), OnMapReadyCallback ,GoogleMap1.OnMarkerClickLis
 
         }
         mMap.isMyLocationEnabled = true
-        mMap.setOnMyLocationChangeListener(GoogleMap1.OnMyLocationChangeListener(){
-            
+        mMap.setOnMyLocationChangeListener(GoogleMap1.OnMyLocationChangeListener() {
+
 
         })
     }
@@ -157,6 +157,10 @@ class MapsFragment : Fragment(), OnMapReadyCallback ,GoogleMap1.OnMarkerClickLis
         }
     }
 
+
+}
+
+private fun GoogleMap1.setOnMyLocationChangeListener(onMyLocationChangeListener: GoogleMap1.OnMyLocationChangeListener, function: () -> Unit) {
 
 }
 
